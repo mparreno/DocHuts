@@ -1,0 +1,6 @@
+function loadHuts()
+{
+	<% @huts.each do |hut| %>
+			addHutMarker("<%= hut.name.titleize %>", new google.maps.LatLng(<%= hut.point.latitude %>,<%= hut.point.longitude %>), <%= hut.point.id %>);
+	<% end %>
+}

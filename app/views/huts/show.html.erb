@@ -1,0 +1,19 @@
+<script type='text/javascript'>
+	
+	var hutLatlng = new google.maps.LatLng(<%= @hut.point.latitude %>,<%= @hut.point.longitude %>);
+	
+    $(function()
+    {
+		initializeShow("<%= @hut.name.titleize %>", hutLatlng, "<%= @hut.id %>");
+    });
+
+</script>
+
+<div id="information">
+	<h2>
+		<%= @hut.name.titleize %>
+	</h2>
+	<p><%= link_to 'Back to New Zealand', '/'%></p>
+</div>
+<div id="map_div" class="show"></div>
+
